@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  moveSpeed: 1.25
+  moveSpeed: 2
   desireVelocity: {x: 1, y: 0, z: 0}
   desireRotation: {x: 0, y: 0, z: 0, w: 0}
   entityType: 1
