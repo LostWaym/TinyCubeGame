@@ -68,7 +68,11 @@ public class PlayerLogic : MonoBehaviour
         energyRegenDelayTimer = energyRegenDelay;
         launchItvalTimer = launchItval;
 
+        //var vec = targetPos - oriPos;
+
+        //InternalLaunchBullet(oriPos, oriPos + Quaternion.AngleAxis(15, Vector3.up) * vec);
         InternalLaunchBullet(oriPos, targetPos);
+        //InternalLaunchBullet(oriPos, oriPos + Quaternion.AngleAxis(-15, Vector3.up) * vec);
     }
 
     private void InternalLaunchBullet(Vector3 oriPos, Vector3 targetPos)

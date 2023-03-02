@@ -26,7 +26,7 @@ public class Entity : MonoBehaviour
         rb.velocity = speed;
 
         var rotation = transform.rotation;
-        transform.rotation = Quaternion.Slerp(rotation, desireRotation, 0.2f);
+        transform.rotation = Quaternion.Slerp(rotation, desireRotation, 0.4f);
     }
 
     public void SetDesireRotation(Quaternion quaternion)

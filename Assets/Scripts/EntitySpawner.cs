@@ -9,6 +9,8 @@ public class EntitySpawner : MonoBehaviour
     public float spawnItvalTimer = 0;
     public Transform spawnPrefab;
 
+    public int spawnCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +38,11 @@ public class EntitySpawner : MonoBehaviour
     {
         Transform trans = Instantiate(spawnPrefab);
         trans.position = transform.position;
+
+        Entity entity = trans.GetComponent<Entity>();
+        entity.hp += (int)(spawnCount * 0.075f);
+        entity.moveSpeed += spawnCount * 0.05f;
+
+        spawnCount++;
     }
 }
