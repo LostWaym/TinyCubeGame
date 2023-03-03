@@ -62,19 +62,20 @@ public class GameManager : MonoBehaviour
         CheckWinCondition();
     }
 
-    public void AnyEntityDeath(EntityType type)
+    public void AnyEntityDeath(Entity entity)
     {
+        EntityType type = entity.entityType;
         switch (type)
         {
             case EntityType.Player:
                 DoGameFail();
                 break;
             case EntityType.Monster:
-                AddScore(1);
+                AddScore(entity.dropCoin);
                 AddKillAmount(1);
                 break;
             case EntityType.Other:
-                AddScore(10);
+                AddScore(entity.dropCoin);
                 break;
             default:
                 break;

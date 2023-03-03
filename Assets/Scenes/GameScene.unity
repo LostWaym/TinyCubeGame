@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -528,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
       propertyPath: spawnItvalTime
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
@@ -539,6 +539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172353556878298520, guid: 4696427fe9662f9449ec0b133e876aea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4696427fe9662f9449ec0b133e876aea, type: 3}
@@ -1646,8 +1651,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
+      propertyPath: spawnPrefab
+      value: 
+      objectReference: {fileID: 257510428937953504, guid: 5a764e6d85dbbc14494203fd774e54ec,
+        type: 3}
+    - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
+        type: 3}
       propertyPath: spawnItvalTime
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
@@ -1658,6 +1669,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172353556878298520, guid: 4696427fe9662f9449ec0b133e876aea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4696427fe9662f9449ec0b133e876aea, type: 3}
@@ -1726,7 +1742,7 @@ PrefabInstance:
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
       propertyPath: spawnItvalTime
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
@@ -1737,6 +1753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172353556878298520, guid: 4696427fe9662f9449ec0b133e876aea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4696427fe9662f9449ec0b133e876aea, type: 3}
@@ -1902,7 +1923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 902814873}
   cam: {fileID: 2055864137}
-  offset: {x: 0, y: 10, z: -10}
+  offset: {x: 0, y: 11, z: -12}
   followRatio: 0.02
 --- !u!114 &1872954506
 MonoBehaviour:
@@ -2014,8 +2035,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055864134}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 10, z: -10}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 11, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1606359817}
@@ -2232,8 +2253,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
+      propertyPath: spawnPrefab
+      value: 
+      objectReference: {fileID: 257510428937953504, guid: 59c6416b3e53c4e46804c598f91e04cb,
+        type: 3}
+    - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
+        type: 3}
       propertyPath: spawnItvalTime
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8172353556878298503, guid: 4696427fe9662f9449ec0b133e876aea,
         type: 3}
@@ -2244,6 +2271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172353556878298520, guid: 4696427fe9662f9449ec0b133e876aea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4696427fe9662f9449ec0b133e876aea, type: 3}
@@ -2313,11 +2345,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8369102777129992575, guid: bc78f88721a6a3b469fc5849e588044c,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.86
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7119988577286855882, guid: bc78f88721a6a3b469fc5849e588044c, type: 3}

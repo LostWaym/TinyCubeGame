@@ -9,14 +9,19 @@ public class Entity : MonoBehaviour
     public Vector3 desireVelocity;
     public Quaternion desireRotation;
     public EntityType entityType = EntityType.Other;
+    public int dropCoin;
 
     private Vector3 acceVelocity;
+
+    public delegate void TakeDamageDelegate(float damage, Vector3 direction);
+    public event TakeDamageDelegate OnTakeDamage;
 
     protected Rigidbody rb;
 
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        
     }
 
     protected virtual void FixedUpdate()
@@ -39,12 +44,13 @@ public class Entity : MonoBehaviour
         desireVelocity = velocity;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector3 direction = default)
     {
         hp -= damage;
+        OnTakeDamage?.Invoke(damage, direction);
         if (hp <= 0)
         {
-            GameManager.Instance.AnyEntityDeath(entityType);
+            GameManager.Instance.AnyEntityDeath(this);
             Destroy(gameObject);
         }
     }

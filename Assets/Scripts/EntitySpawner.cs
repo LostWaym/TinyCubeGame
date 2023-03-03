@@ -15,7 +15,7 @@ public class EntitySpawner : MonoBehaviour
     void Start()
     {
         var pos = transform.position;
-        pos.y = 0.5f;
+        pos.y = 0f;
         transform.position = pos;
         spawnItvalTimer += spawnStartDelay;
     }
@@ -39,9 +39,9 @@ public class EntitySpawner : MonoBehaviour
         Transform trans = Instantiate(spawnPrefab);
         trans.position = transform.position;
 
-        Entity entity = trans.GetComponent<Entity>();
-        entity.hp += (int)(spawnCount * 0.075f);
-        entity.moveSpeed += spawnCount * 0.05f;
+        //Entity entity = trans.GetComponent<Entity>();
+        //entity.hp += (int)(spawnCount * 0.075f);
+        //entity.moveSpeed += spawnCount * 0.05f;
 
         spawnCount++;
     }

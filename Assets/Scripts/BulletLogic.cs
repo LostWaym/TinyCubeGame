@@ -8,12 +8,16 @@ public class BulletLogic : MonoBehaviour
     public bool causeDamage;
     public Vector3 velocity;
     public float lifetime = 5f;
+    public Entity launcher;
+    public EntityType launcherType;
 
-    public void Init(float damage, Vector3 velocity)
+    public void Init(float damage, Vector3 velocity, Entity launcher)
     {
         this.damage = damage;
         this.velocity = velocity;
         transform.LookAt(transform.position + velocity);
+        this.launcher = launcher;
+        launcherType = launcher.entityType;
     }
 
     private void FixedUpdate()
@@ -32,9 +36,10 @@ public class BulletLogic : MonoBehaviour
         if (entity == null)
             return;
 
-        if (entity.entityType != EntityType.Player)
+        if (launcherType == EntityType.Player && entity.entityType != EntityType.Player ||
+            launcherType == EntityType.Monster && entity.entityType == EntityType.Player)
         {
-            entity.TakeDamage(damage);
+            entity.TakeDamage(damage, velocity.normalized * 0.5f);
             causeDamage = true;
             Destroy(gameObject);
         }

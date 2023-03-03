@@ -5134,11 +5134,11 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8369102777129992546}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c4523d506ecfe24428019ab550914619, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.86
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8369102777129992544
 Rigidbody:
@@ -5173,3 +5173,4 @@ MonoBehaviour:
   desireVelocity: {x: 0, y: 0, z: 0}
   desireRotation: {x: 0, y: 0, z: 0, w: 0}
   entityType: 2
+  dropCoin: 10

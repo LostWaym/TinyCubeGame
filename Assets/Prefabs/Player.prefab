@@ -171,7 +171,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551211546554436386}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c4523d506ecfe24428019ab550914619, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -210,6 +210,7 @@ MonoBehaviour:
   desireVelocity: {x: 0, y: 0, z: 0}
   desireRotation: {x: 0, y: 0, z: 0, w: 0}
   entityType: 0
+  dropCoin: 0
 --- !u!114 &551211546554436394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,14 +225,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 9037665164777200708, guid: 648dfddca5a027848a0ff0f9ecd1eac5,
     type: 3}
-  maxEnergy: 10
-  energy: 10
-  energyRegenDelay: 1
+  maxEnergy: 15
+  energy: 15
+  energyRegenDelay: 1.5
   energyRegenDelayTimer: 0
-  energyRegenAmount: 5
-  launchItval: 0.2
+  energyRegenAmount: 10
+  launchItval: 0.25
   launchItvalTimer: 0
   launchCost: 1
+  launchAngleRangeDelta: 3
   bulletDamage: 1
   bulletMoveSpeed: 32
   dashCost: 3

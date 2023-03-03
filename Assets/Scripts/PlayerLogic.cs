@@ -20,6 +20,7 @@ public class PlayerLogic : MonoBehaviour
     public float launchItval = 0.5f;
     public float launchItvalTimer = 0;
     public float launchCost = 1f;
+    public float launchAngleRangeDelta = 0f;
     public float bulletDamage = 1;
     public float bulletMoveSpeed = 8;
 
@@ -68,11 +69,9 @@ public class PlayerLogic : MonoBehaviour
         energyRegenDelayTimer = energyRegenDelay;
         launchItvalTimer = launchItval;
 
-        //var vec = targetPos - oriPos;
-
-        //InternalLaunchBullet(oriPos, oriPos + Quaternion.AngleAxis(15, Vector3.up) * vec);
-        InternalLaunchBullet(oriPos, targetPos);
-        //InternalLaunchBullet(oriPos, oriPos + Quaternion.AngleAxis(-15, Vector3.up) * vec);
+        var vec = targetPos - oriPos;
+        var newPos = Quaternion.AngleAxis(UnityEngine.Random.Range(-launchAngleRangeDelta, launchAngleRangeDelta), Vector3.up) * vec;
+        InternalLaunchBullet(oriPos, oriPos + newPos);
     }
 
     private void InternalLaunchBullet(Vector3 oriPos, Vector3 targetPos)
@@ -81,7 +80,8 @@ public class PlayerLogic : MonoBehaviour
         BulletLogic logic = bullet.GetComponent<BulletLogic>();
         Vector3 velocity = (targetPos - oriPos).normalized * bulletMoveSpeed;
         bullet.position = oriPos;
-        logic.Init(bulletDamage, velocity);
+        bullet.localScale *= 1.5f;
+        logic.Init(bulletDamage, velocity, entity);
     }
 
     public void Dash(Vector3 targetPos)
